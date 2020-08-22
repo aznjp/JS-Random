@@ -13,7 +13,12 @@ The program begins with a simple generate onclick function linked directly to th
 <img src = "assets/images/Screenshot-1.png">
 
 The program will then access a series of window alerts which will specify the length of the password to be generated
-and which chracter sets you wish to utilize.
+and which chracter sets you wish to utilize such as 
+
+* Upper and Lower Case Characters
+* Numerical Values
+* Special Characters
+
 <img src = "assets/images/Screenshot-2.JPG">
 <img src = "assets/images/Screenshot-3.JPG">
 
