@@ -10,7 +10,7 @@ The password generator is created using
 ## Example snapshots
 
 The program begins with a simple generate onclick function linked directly to the JS files located in the assets folder.
-<img src = "..assets/images/Screenshot-1.png">
+<img src = "assets/images/Screenshot-1.png">
 
 
 
