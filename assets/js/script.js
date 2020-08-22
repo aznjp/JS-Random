@@ -23,7 +23,7 @@ function Length() {
         alert("Password length must be an integer value between 8-128 characters");
         Length();
     } else {
-        alert("You will be asked specifications on which character sets you wish to include into your generated password /n Lowercase letters will automatically be submitted");
+        alert("You will be asked specifications on which character sets you wish to include into your generated password");
     }
     // debugger;
     return passwordLength;
