@@ -14,8 +14,8 @@ The program begins with a simple generate onclick function linked directly to th
 
 The program will then access a series of window alerts which will specify the length of the password to be generated
 and which chracter sets you wish to utilize.
-<img src = "assets/images/Screenshot-2.jpeg">
-<img src = "assets/images/Screenshot-3.jpeg">
+<img src = "assets/images/Screenshot-2.JPG">
+<img src = "assets/images/Screenshot-3.JPG">
 
 The generated password will then be uploaded into the empty text box (Cannot be edited)
 <img src = "assets/images/Screenshot-4.png">
