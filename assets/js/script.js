@@ -17,7 +17,7 @@ var specialAdd;
 function Length() {
     //ParseInt function could have been added to remove any non integer function but I wanted to specify in the 
     //if statement to keep all conditions in the same place
-    passwordLength = prompt("Choose how many characters long you'd like your password to be (between 8-128 characters): ");
+    passwordLength = prompt("Choose how many characters long you'd like your password to be (between 8-128 characters)");
 
     if (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
         alert("Password length must be an integer value between 8-128 characters");
@@ -27,6 +27,13 @@ function Length() {
     }
     // debugger;
     return passwordLength;
+}
+
+//Function for uppercase letters to be added into final pool
+function Lowercase() {
+    lowercaseAdd = confirm("Lowercase letters?");
+    // debugger;
+    return lowercaseAdd;
 }
 
 //Function for uppercase letters to be added into final pool
@@ -51,13 +58,14 @@ function Special() {
 }
 
 
-
 //Function used to generate password after boolean logic is applied to each and the password length is specified
 function generatePassword() {
     //Used to place in function for determining the length and chracter specifications  
     //Console log is used to check if actual value was submitted (Chracters values will be a boolean to determine true or false)
     Length();
     // console.log(passwordLength);
+    Lowercase();
+    // console.log(lowercaseAdd);
     Uppercase();
     // console.log(uppercaseAdd);
     Numbers();
@@ -65,41 +73,40 @@ function generatePassword() {
     Special();
     // console.log(specialAdd);
 
-    //Specifies that the character pool will automatically add in the lowercase 
-    //Puts those directly into the new array for password in empty air quotes
-    var characters = lowercase;
-    var password = "";
+    // The empty string for character is filled with charcters once the function is considered true other wise the condition will not be fulfilled 
+    // thus they wont be added in
+    var characters = ""
+
+    // Once the function has been fulfilled in the for loop down below it will return the password string down below which needs to be 
+    //clarified in the var password function
+    var password = ""
 
     //Specifies the pool of the characters you want to added into the pool of characters via boolean values
     //Note we did specify the lowercase values will always be inputted in
-    if (uppercaseAdd && numberAdd && specialAdd) {
-        characters += uppercase + number + special;
-
-    } else if (uppercaseAdd && numberAdd) {
-        characters += uppercase + number;
-
-    } else if (numberAdd && specialAdd) {
-        characters += number + special;
-
-    } else if (uppercaseAdd && specialAdd) {
-        characters += uppercase + special;
-
-    } else if (uppercaseAdd) {
-        characters += uppercase;
-
-    } else if (numberAdd) {
-        characters += number;
-
-    } else if (specialAdd) {
-        characters += special;
-
+    if (uppercaseAdd) {
+        characters += uppercase
+        console.log(characters)
+    }
+    if (lowercaseAdd) {
+        characters += lowercase
+        console.log(characters)
+    }
+    if (numberAdd) {
+        characters += number
+        console.log(characters)
+    }
+    if (specialAdd) {
+        characters += special
+        console.log(characters)
     } else {
-        characters === lowercase;
+        alert("You need to pick a character set to get back password");
+        generatePassword();
     }
 
     //Uses for loop to go through the value that was inputted in passwordLength function and then adds a new character as they are randomly pulled out from the character pool
     for (var i = 0; i < passwordLength; i++) {
         password += characters.charAt(Math.floor(Math.random() * characters.length));
+        console.log(password)
     }
     return password;
 }
@@ -107,7 +114,9 @@ function generatePassword() {
 // Write password to the #password input
 function writePassword() {
     var password = generatePassword();
+    console.log(password)
     var passwordText = document.querySelector("#password");
+
     passwordText.value = password;
 }
 
