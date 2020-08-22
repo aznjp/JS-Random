@@ -50,37 +50,7 @@ function Special() {
     return specialAdd;
 }
 
-//Specifies that the character pool will automatically add in the lowercase 
-//Puts those directly into the new array for password in empty air quotes
-var characters = lowercase;
-var password = "";
 
-//Specifies the pool of the characters you want to added into the pool of characters via boolean values
-//Note we did specify the lowercase values will always be inputted in
-if (uppercaseAdd && numberAdd && specialAdd) {
-    characters += uppercase + number + special;
-
-} else if (uppercaseAdd && numberAdd) {
-    characters += uppercase + number;
-
-} else if (numberAdd && specialAdd) {
-    characters += number + special;
-
-} else if (uppercaseAdd && specialAdd) {
-    characters += uppercase + special;
-
-} else if (uppercaseAdd) {
-    characters += uppercase;
-
-} else if (numberAdd) {
-    characters += number;
-
-} else if (specialAdd) {
-    characters += special;
-
-} else {
-    characters === lowercase;
-}
 
 //Function used to generate password after boolean logic is applied to each and the password length is specified
 function generatePassword() {
@@ -95,6 +65,38 @@ function generatePassword() {
     Special();
     console.log(specialAdd);
 
+    //Specifies that the character pool will automatically add in the lowercase 
+    //Puts those directly into the new array for password in empty air quotes
+    var characters = lowercase;
+    var password = "";
+
+    //Specifies the pool of the characters you want to added into the pool of characters via boolean values
+    //Note we did specify the lowercase values will always be inputted in
+    if (uppercaseAdd && numberAdd && specialAdd) {
+        characters += uppercase + number + special;
+
+    } else if (uppercaseAdd && numberAdd) {
+        characters += uppercase + number;
+
+    } else if (numberAdd && specialAdd) {
+        characters += number + special;
+
+    } else if (uppercaseAdd && specialAdd) {
+        characters += uppercase + special;
+
+    } else if (uppercaseAdd) {
+        characters += uppercase;
+
+    } else if (numberAdd) {
+        characters += number;
+
+    } else if (specialAdd) {
+        characters += special;
+
+    } else {
+        characters === lowercase;
+    }
+
     //Uses for loop to go through the value that was inputted in passwordLength function and then adds a new character as they are randomly pulled out from the character pool
     for (var i = 0; i < passwordLength; i++) {
         password += characters.charAt(Math.floor(Math.random() * characters.length));
@@ -104,8 +106,6 @@ function generatePassword() {
 
 // Write password to the #password input
 function writePassword() {
-
-    var password = "";
     var password = generatePassword();
     var passwordText = document.querySelector("#password");
     passwordText.value = password;
