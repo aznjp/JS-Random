@@ -3,7 +3,7 @@
 The password generator is created using 
 
 * If-Else statements
-* For Loops 
+* For and While Loops 
 * Strings and Arrays
 * Logic Operators (+, - , * , ...)
 

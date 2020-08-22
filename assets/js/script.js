@@ -81,6 +81,12 @@ function generatePassword() {
     //clarified in the var password function
     var password = ""
 
+    //While loop is used to clarify a specification if all character sets were false then an alert would occur and then restart the function
+    while (!uppercaseAdd && !lowercaseAdd && !numberAdd && !specialAdd) {
+        alert("You need to pick at least one character set to continue");
+        generatePassword();
+    }
+
     //Specifies the pool of the characters you want to added into the pool of characters via boolean values
     //Note we did specify the lowercase values will always be inputted in
     if (uppercaseAdd) {
@@ -98,10 +104,8 @@ function generatePassword() {
     if (specialAdd) {
         characters += special
         console.log(characters)
-    } else {
-        alert("You need to pick a character set to get back password");
-        generatePassword();
     }
+
 
     //Uses for loop to go through the value that was inputted in passwordLength function and then adds a new character as they are randomly pulled out from the character pool
     for (var i = 0; i < passwordLength; i++) {
