@@ -7,11 +7,18 @@ The password generator is created using
 * Strings and Arrays
 * Logic Operators (+, - , * , ...)
 
-## Example snapshots
+## Example snapshots and Usage
 
 The program begins with a simple generate onclick function linked directly to the JS files located in the assets folder.
 <img src = "assets/images/Screenshot-1.png">
 
+The program will then access a series of window alerts which will specify the length of the password to be generated
+and which chracter sets you wish to utilize.
+<img src = "assets/images/Screenshot-2.jpg">
+<img src = "assets/images/Screenshot-3.jpg">
 
+The generated password will then be uploaded into the empty text box (Cannot be edited)
+<img src = "assets/images/Screenshot-4.png">
 
-## Usage
+## Links to the project
+You can find this linked at https://aznjp.github.io/JS-Random/
