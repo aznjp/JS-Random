@@ -38,14 +38,14 @@ function Uppercase() {
 
 //Function for numbers to be added into final pool
 function Numbers() {
-    numberAdd = confirm("Do you want to include numbers in your password? \n(Yes or No)");
+    numberAdd = confirm("Numbers?");
     // debugger;
     return numberAdd;
 }
 
 //Function for special letters to be added into final pool
 function Special() {
-    specialAdd = confirm("Do you want to include special characters in your password? \n(Yes or No)");
+    specialAdd = confirm("Special Characters?");
     // debugger;
     return specialAdd;
 }
@@ -57,13 +57,13 @@ function generatePassword() {
     //Used to place in function for determining the length and chracter specifications  
     //Console log is used to check if actual value was submitted (Chracters values will be a boolean to determine true or false)
     Length();
-    console.log(passwordLength);
+    // console.log(passwordLength);
     Uppercase();
-    console.log(uppercaseAdd);
+    // console.log(uppercaseAdd);
     Numbers();
-    console.log(numberAdd);
+    // console.log(numberAdd);
     Special();
-    console.log(specialAdd);
+    // console.log(specialAdd);
 
     //Specifies that the character pool will automatically add in the lowercase 
     //Puts those directly into the new array for password in empty air quotes
