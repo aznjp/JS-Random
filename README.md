@@ -19,6 +19,8 @@ and which chracter sets you wish to utilize such as
 * Numerical Values
 * Special Characters
 
+NOTE: THE PROMPTS WERE CONFIRMS TO PREVENT ANY EXTERNAL ACTIONS OCCURING WHEN PUTTING IN INPUT VIA BOOLEAN VALUES!!
+
 <img src = "assets/images/Screenshot-2.JPG">
 <img src = "assets/images/Screenshot-3.JPG">
 
